@@ -19,7 +19,7 @@ function! OpenNerdTree()
         exec "normal! \<c-w>\<c-w>"
     endif
 endfunction
-autocmd VimEnter * call OpenNerdTree()
+"autocmd VimEnter * call OpenNerdTree()
 
 
 " nerdtree window resize
