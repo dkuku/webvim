@@ -21,7 +21,7 @@ Plug 'editorconfig/editorconfig-vim',             { 'commit' : 'a459b8cfef00100d
 Plug 'bronson/vim-trailing-whitespace',           { 'commit' : '733fb64337b6da4a51c85a43450cd620d8b617b5' }
 Plug 'scrooloose/syntastic',                      { 'commit' : '6ffba7395c562e152cb84bc8f7906de2b1ed0b8a' }
 Plug 'junegunn/vim-easy-align',                   { 'commit' : '0cb6b98fc155717b0a56c110551ac57d1d951ddb' }
-Plug 'terryma/vim-multiple-cursors',              { 'commit' : '51d0717f63cc231f11b4b63ee5b611f589dce1b3' }
+"Plug 'terryma/vim-multiple-cursors',              { 'commit' : '51d0717f63cc231f11b4b63ee5b611f589dce1b3' }
 Plug 'maksimr/vim-jsbeautify',                    { 'commit' : 'caffda66a2a8852ee132f95291115af67370c5e7', 'do' : 'git submodule update --init --recursive && npm install' }
 Plug 'maxbrunsfeld/vim-yankstack',                { 'commit' : '157a659c1b101c899935d961774fb5c8f0775370' }
 Plug 'tpope/vim-surround',                        { 'commit' : 'e49d6c2459e0f5569ff2d533b4df995dd7f98313'}
@@ -36,5 +36,27 @@ Plug 'moll/vim-node',                             { 'commit' : '13b31218447335e1
 Plug 'syngan/vim-vimlint',                        { 'commit' : 'c8b9cd9d8a0fb6dc69667d32819aeef503cff55c'}
 Plug 'ynkdir/vim-vimlparser',                     { 'commit' : '2fff43c58968a18bc01bc8304df68bde01af04d9'}
 Plug 'mattn/emmet-vim',                           { 'commit' : '5b217264dde398699849a0211bbe1a917d8b2f7a'}
+Plug 'leafgarland/typescript-vim'
+Plug 'thaerkh/vim-indentguides'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'claco/jasmine.vim'
+Plug 'scrooloose/syntastic'
+Plug 'honza/vim-snippets'
+Plug 'matthewsimo/angular-vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'Raimondi/delimitMate'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'vimwiki/vimwiki'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'ervandew/supertab'
+Plug 'ctrlpvim/ctrlp.vim'
+"Dictionaries
+Plug 'ryuzee/vim-ruby-dict'
+Plug 'guileen/vim-node-dict'
+Plug 'rkulla/pydiction'
 
 call plug#end()

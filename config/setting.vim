@@ -23,7 +23,9 @@ colorscheme PaperColor
 set smartindent
 set autoindent
 set copyindent
-set shiftwidth=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set shiftround
 set backspace=indent,eol,start
 set smarttab
