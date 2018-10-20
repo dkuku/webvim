@@ -4,7 +4,7 @@
 " author: Bertrand Chevrier <chevrier.bertrand@gmail.com>
 " source: https://github.com/krampstudio/dotvim
 " year  : 2015
-"
+
 
 " TODO split by plugin ?
 
@@ -164,7 +164,6 @@ vmap <leader>a <Plug>(EasyAlign)<cr><right>
 
 let g:easy_align_ignore_groups = ['Comment']
 
-
 " [> multiple cursor <]
 
 let g:multi_cursor_use_default_mapping=0
@@ -172,7 +171,6 @@ let g:multi_cursor_next_key='<C-m>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<esc>'
-
 
 " [> JsBeautify <]
 

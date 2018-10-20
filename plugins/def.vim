@@ -1,4 +1,3 @@
-
 function! InstallYCM(info)
   if a:info.status == 'installed' || a:info.force
     !./install.py
@@ -9,11 +8,11 @@ endfunction
 " Start plugins definition
 call plug#begin($HOME.'/.vim/plugins/plugged')
 
-Plug 'scrooloose/nerdtree',                        | Plug 'https://gist.github.com/1f40e70e615f2fa2212bf5423662277d.git', { 'dir' : g:vimDir . '/nerdtree_plugin' }
+Plug 'scrooloose/nerdtree',                | Plug 'https://gist.github.com/1f40e70e615f2fa2212bf5423662277d.git', { 'dir' : g:vimDir . '/nerdtree_plugin' }
 
 Plug 'scrooloose/nerdcommenter',
 Plug 'goatslacker/mango.vim',
-Plug 'bling/vim-airline',                         { 'do' : $HOME.'/.vim/fonts/install' }
+Plug 'bling/vim-airline',                  { 'do' : $HOME.'/.vim/fonts/install' }
 Plug 'vim-dist/PaperColor.vim',
 Plug 'tpope/vim-fugitive',
 Plug 'airblade/vim-gitgutter',
@@ -31,7 +30,7 @@ Plug 'othree/javascript-libraries-syntax.vim',
 Plug 'hail2u/vim-css3-syntax',
 Plug 'cakebaker/scss-syntax.vim',
 Plug 'othree/html5.vim',
-Plug 'Valloric/YouCompleteMe',                    { 'do': function('InstallYCM') }
+Plug 'Valloric/YouCompleteMe',             { 'do': function('InstallYCM') }
 Plug 'moll/vim-node',
 Plug 'syngan/vim-vimlint',
 Plug 'ynkdir/vim-vimlparser',
