@@ -220,3 +220,15 @@ nnoremap <leader>r :call Refactor()<cr>
 "
 au FileType html,css,scss imap <expr>kj  emmet#expandAbbrIntelligent("\<tab>")
 
+nnoremap gm m
+
+"[> Denite <]
+
+
+" [> Rspec.vim mappings <]
+"ap <Leader>t :call RunCurrentSpecFile()<CR>
+"ap <Leader>s :call RunNearestSpec()<CR>
+"ap <Leader>l :call RunLastSpec()<CR>
+"ap <Leader>* :call RunAllSpecs()<CR>
+"et g:rspec_command = '!bundle exec rspec --require ~/.vim/quickfix_formatter.rb --format QuickfixFormatter {spec}'
+" opens the quickfix file and window
