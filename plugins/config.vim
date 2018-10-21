@@ -221,12 +221,55 @@ au FileType html,css,scss imap <expr>kj  emmet#expandAbbrIntelligent("\<tab>")
 nnoremap gm m
 
 "[> Denite <]
+" reset 50% winheight on window resize
+augroup deniteresize
+  autocmd!
+  autocmd VimResized,VimEnter * call denite#custom#option('default',
+        \'winheight', winheight(0) / 2)
+augroup end
 
+call denite#custom#option('default', {
+      \ 'prompt': '❯'
+      \ })
 
-" [> Rspec.vim mappings <]
-"ap <Leader>t :call RunCurrentSpecFile()<CR>
-"ap <Leader>s :call RunNearestSpec()<CR>
-"ap <Leader>l :call RunLastSpec()<CR>
-"ap <Leader>* :call RunAllSpecs()<CR>
-"et g:rspec_command = '!bundle exec rspec --require ~/.vim/quickfix_formatter.rb --format QuickfixFormatter {spec}'
-" opens the quickfix file and window
+	" Pt command on grep source
+	call denite#custom#var('grep', 'command', ['pt'])
+	call denite#custom#var('grep', 'default_opts',
+			\ ['--nogroup', '--nocolor', '--smart-case'])
+	call denite#custom#var('grep', 'recursive_opts', [])
+	call denite#custom#var('grep', 'pattern_opt', [])
+	call denite#custom#var('grep', 'separator', ['--'])
+	call denite#custom#var('grep', 'final_opts', [])
+
+call denite#custom#map('insert', '<Esc>', '<denite:enter_mode:normal>',
+      \'noremap')
+call denite#custom#map('normal', '<Esc>', '<NOP>',
+      \'noremap')
+call denite#custom#map('insert', '<C-v>', '<denite:do_action:vsplit>',
+      \'noremap')
+call denite#custom#map('normal', '<C-v>', '<denite:do_action:vsplit>',
+      \'noremap')
+call denite#custom#map('normal', 'dw', '<denite:delete_word_after_caret>',
+      \'noremap')
+
+nnoremap <C-p> :<C-u>Denite file_rec<CR>
+nnoremap <leader>s :<C-u>Denite buffer<CR>
+nnoremap <leader><Space>s :<C-u>DeniteBufferDir buffer<CR>
+nnoremap <leader>8 :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
+nnoremap <leader>/ :<C-u>Denite grep:. -mode=normal<CR>
+nnoremap <leader><Space>/ :<C-u>DeniteBufferDir grep:. -mode=normal<CR>
+nnoremap <leader>d :<C-u>DeniteBufferDir file_rec<CR>
+nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
+nnoremap <leader>lr :<C-u>Denite references -mode=normal<CR>
+
+hi link deniteMatchedChar Special
+
+" [> vim-test mappings <]
+let test#enabled_runners = ["ruby#rspec"]
+" make test commands execute using dispatch.vim
+let test#strategy = "vimterminal"
+nmap <silent> t<C-n> :TestNearest<CR> " t Ctrl+n
+nmap <silent> t<C-f> :TestFile<CR>    " t Ctrl+f
+nmap <silent> t<C-a> :TestSuite<CR>   " t Ctrl+s
+nmap <silent> t<C-l> :TestLast<CR>    " t Ctrl+l
+nmap <silent> t<C-g> :TestVisit<CR>   " t Ctrl+g
