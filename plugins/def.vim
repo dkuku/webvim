@@ -51,5 +51,7 @@ Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
+Plug 'tek/vim-textobj-ruby'
+Plug 'kana/vim-textobj-user'
 
 call plug#end()
